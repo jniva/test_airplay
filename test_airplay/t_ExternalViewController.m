@@ -1,23 +1,24 @@
 //
-//  t_ViewController.m
+//  t_ExternalViewController.m
 //  test_airplay
 //
 //  Created by abe.chua on 12-12-11.
 //  Copyright (c) 2012年 abe.chua. All rights reserved.
 //
 
-#import "t_ViewController.h"
+#import "t_ExternalViewController.h"
 
-@interface t_ViewController ()
+@interface t_ExternalViewController ()
 
 @end
 
-@implementation t_ViewController
+@implementation t_ExternalViewController
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:[UIColor redColor]];
 }
 
 - (void)viewDidUnload

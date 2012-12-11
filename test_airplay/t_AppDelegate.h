@@ -9,11 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @class t_ViewController;
+@class t_ExternalViewController;
+@class t_RemoteControlViewController;
 
 @interface t_AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIWindow *internalWindow;
+@property (strong, nonatomic) UIWindow *externalWindow;
 
 @property (strong, nonatomic) t_ViewController *viewController;
+@property (strong, nonatomic) t_ExternalViewController *externalViewController;
+@property (strong, nonatomic) t_RemoteControlViewController *remoteControlViewController;
 
 @end

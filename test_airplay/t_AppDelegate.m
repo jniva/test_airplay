@@ -9,16 +9,36 @@
 #import "t_AppDelegate.h"
 
 #import "t_ViewController.h"
+#import "t_ExternalViewController.h"
+#import "t_RemoteControlViewController.h"
 
 @implementation t_AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[t_ViewController alloc] initWithNibName:@"t_ViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+    
+    // Register for notification
+    [[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(screenDidConnect:)
+												 name:UIScreenDidConnectNotification
+											   object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(screenDidDisconnect:)
+												 name:UIScreenDidDisconnectNotification
+											   object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(screenModeDidChange:)
+                                                 name:UIScreenModeDidChangeNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(screenBrightnessDidChange:)
+                                                 name:UIScreenBrightnessDidChangeNotification
+                                               object:nil];
+    
+    // Intitialise windows
+    [self initWindows];
+    
     return YES;
 }
 
@@ -47,6 +67,96 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    // Unregister for notifications
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIScreenDidConnectNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIScreenDidDisconnectNotification object:nil];
+    
 }
 
+- (void)screenDidConnect:(NSNotification *)notification {
+    NSLog(@"Screen Connected:%@",[notification object]);
+    
+    [self initWindows];
+}
+
+- (void)screenDidDisconnect:(NSNotification *)notification {
+    NSLog(@"Screen Disconnected:%@",[notification object]);
+    
+    
+    [self initWindows];
+}
+
+- (void)screenModeDidChange:(NSNotification *)notification {
+    NSLog(@"Screen Mode Changed:%@",[notification object]);
+    
+    [self initWindows];
+}
+
+- (void)screenBrightnessDidChange:(NSNotification *)notification {
+    NSLog(@"Screen Brightness Changed:%@",[notification object]);
+}
+
+- (void)initWindows {
+    NSArray *screens;
+    
+    screens = [UIScreen screens];
+    NSUInteger screenCount = [screens count];
+    
+    NSLog(@"There are have %d screen.",screenCount);
+    
+    if (screenCount > 1) {
+    
+        if(self.internalWindow == nil) {
+            self.internalWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        }
+        if(self.externalWindow == nil) {
+            self.externalWindow = [[UIWindow alloc] initWithFrame:[[screens objectAtIndex:1] bounds]];
+        }
+        
+        if(self.viewController != nil) {
+            [self.viewController removeFromParentViewController];
+            self.viewController = nil;
+        }
+        if(self.remoteControlViewController == nil) {
+            self.remoteControlViewController = [[t_RemoteControlViewController alloc] init];
+        }
+        if(self.externalViewController == nil) {
+            self.externalViewController = [[t_ExternalViewController alloc] init];
+        }
+        
+        
+        self.internalWindow.rootViewController = self.remoteControlViewController;
+        [self.internalWindow makeKeyAndVisible];
+        
+        self.externalWindow.rootViewController = self.externalViewController;
+        [self.externalWindow setScreen:[screens objectAtIndex:1]];
+        [self.externalWindow setHidden:NO];
+    }
+    else {
+        
+        if(self.internalWindow == nil ) {
+            self.internalWindow = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        }
+        if(self.externalWindow != nil) {
+            self.externalWindow = nil;
+        }
+        
+        if(self.viewController == nil) {
+            self.viewController = [[t_ViewController alloc] init];
+        }
+        if(self.remoteControlViewController != nil) {
+            [self.remoteControlViewController removeFromParentViewController];
+            self.remoteControlViewController = nil;
+        }
+        if(self.externalViewController != nil) {
+            [self.externalViewController removeFromParentViewController];
+            self.externalViewController = nil;
+        }
+        
+        self.internalWindow.rootViewController = self.viewController;
+        [self.internalWindow makeKeyAndVisible];
+    }
+}
 @end

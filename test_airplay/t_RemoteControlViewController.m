@@ -1,23 +1,24 @@
 //
-//  t_ViewController.m
+//  t_RemoteControlViewController.m
 //  test_airplay
 //
 //  Created by abe.chua on 12-12-11.
 //  Copyright (c) 2012年 abe.chua. All rights reserved.
 //
 
-#import "t_ViewController.h"
+#import "t_RemoteControlViewController.h"
 
-@interface t_ViewController ()
+@interface t_RemoteControlViewController ()
 
 @end
 
-@implementation t_ViewController
+@implementation t_RemoteControlViewController
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:[UIColor grayColor]];
 }
 
 - (void)viewDidUnload
