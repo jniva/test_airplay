@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69196192167701FF00662408 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69196191167701FF00662408 /* UIKit.framework */; };
+		69196194167701FF00662408 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69196193167701FF00662408 /* Foundation.framework */; };
+		69196196167701FF00662408 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69196195167701FF00662408 /* CoreGraphics.framework */; };
+		6919619C167701FF00662408 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6919619A167701FF00662408 /* InfoPlist.strings */; };
+		6919619E167701FF00662408 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6919619D167701FF00662408 /* main.m */; };
+		691961A2167701FF00662408 /* t_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 691961A1167701FF00662408 /* t_AppDelegate.m */; };
+		691961A5167701FF00662408 /* t_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 691961A4167701FF00662408 /* t_ViewController.m */; };
+		691961A8167701FF00662408 /* t_ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 691961A6167701FF00662408 /* t_ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6919618D167701FF00662408 /* test_airplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_airplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69196191167701FF00662408 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		69196193167701FF00662408 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		69196195167701FF00662408 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		69196199167701FF00662408 /* test_airplay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "test_airplay-Info.plist"; sourceTree = "<group>"; };
+		6919619B167701FF00662408 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6919619D167701FF00662408 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6919619F167701FF00662408 /* test_airplay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test_airplay-Prefix.pch"; sourceTree = "<group>"; };
+		691961A0167701FF00662408 /* t_AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = t_AppDelegate.h; sourceTree = "<group>"; };
+		691961A1167701FF00662408 /* t_AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = t_AppDelegate.m; sourceTree = "<group>"; };
+		691961A3167701FF00662408 /* t_ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = t_ViewController.h; sourceTree = "<group>"; };
+		691961A4167701FF00662408 /* t_ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = t_ViewController.m; sourceTree = "<group>"; };
+		691961A7167701FF00662408 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/t_ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6919618A167701FF00662408 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69196192167701FF00662408 /* UIKit.framework in Frameworks */,
+				69196194167701FF00662408 /* Foundation.framework in Frameworks */,
+				69196196167701FF00662408 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69196182167701FF00662408 = {
+			isa = PBXGroup;
+			children = (
+				69196197167701FF00662408 /* test_airplay */,
+				69196190167701FF00662408 /* Frameworks */,
+				6919618E167701FF00662408 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6919618E167701FF00662408 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6919618D167701FF00662408 /* test_airplay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69196190167701FF00662408 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69196191167701FF00662408 /* UIKit.framework */,
+				69196193167701FF00662408 /* Foundation.framework */,
+				69196195167701FF00662408 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69196197167701FF00662408 /* test_airplay */ = {
+			isa = PBXGroup;
+			children = (
+				691961A0167701FF00662408 /* t_AppDelegate.h */,
+				691961A1167701FF00662408 /* t_AppDelegate.m */,
+				691961A3167701FF00662408 /* t_ViewController.h */,
+				691961A4167701FF00662408 /* t_ViewController.m */,
+				691961A6167701FF00662408 /* t_ViewController.xib */,
+				69196198167701FF00662408 /* Supporting Files */,
+			);
+			path = test_airplay;
+			sourceTree = "<group>";
+		};
+		69196198167701FF00662408 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				69196199167701FF00662408 /* test_airplay-Info.plist */,
+				6919619A167701FF00662408 /* InfoPlist.strings */,
+				6919619D167701FF00662408 /* main.m */,
+				6919619F167701FF00662408 /* test_airplay-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6919618C167701FF00662408 /* test_airplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 691961AB167701FF00662408 /* Build configuration list for PBXNativeTarget "test_airplay" */;
+			buildPhases = (
+				69196189167701FF00662408 /* Sources */,
+				6919618A167701FF00662408 /* Frameworks */,
+				6919618B167701FF00662408 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test_airplay;
+			productName = test_airplay;
+			productReference = 6919618D167701FF00662408 /* test_airplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69196184167701FF00662408 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = t_;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = abe.chua;
+			};
+			buildConfigurationList = 69196187167701FF00662408 /* Build configuration list for PBXProject "test_airplay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 69196182167701FF00662408;
+			productRefGroup = 6919618E167701FF00662408 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6919618C167701FF00662408 /* test_airplay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6919618B167701FF00662408 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6919619C167701FF00662408 /* InfoPlist.strings in Resources */,
+				691961A8167701FF00662408 /* t_ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69196189167701FF00662408 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6919619E167701FF00662408 /* main.m in Sources */,
+				691961A2167701FF00662408 /* t_AppDelegate.m in Sources */,
+				691961A5167701FF00662408 /* t_ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6919619A167701FF00662408 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6919619B167701FF00662408 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		691961A6167701FF00662408 /* t_ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				691961A7167701FF00662408 /* en */,
+			);
+			name = t_ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		691961A9167701FF00662408 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		691961AA167701FF00662408 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		691961AC167701FF00662408 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test_airplay/test_airplay-Prefix.pch";
+				INFOPLIST_FILE = "test_airplay/test_airplay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		691961AD167701FF00662408 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test_airplay/test_airplay-Prefix.pch";
+				INFOPLIST_FILE = "test_airplay/test_airplay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69196187167701FF00662408 /* Build configuration list for PBXProject "test_airplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				691961A9167701FF00662408 /* Debug */,
+				691961AA167701FF00662408 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		691961AB167701FF00662408 /* Build configuration list for PBXNativeTarget "test_airplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				691961AC167701FF00662408 /* Debug */,
+				691961AD167701FF00662408 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69196184167701FF00662408 /* Project object */;
+}
