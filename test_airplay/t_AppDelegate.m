@@ -70,7 +70,6 @@
     
     // Unregister for notifications
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIScreenDidConnectNotification object:nil];
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIScreenDidDisconnectNotification object:nil];
     
 }
@@ -83,7 +82,6 @@
 
 - (void)screenDidDisconnect:(NSNotification *)notification {
     NSLog(@"Screen Disconnected:%@",[notification object]);
-    
     
     [self initWindows];
 }

@@ -19,6 +19,12 @@
 {
     [super viewDidLoad];
     [self.view setBackgroundColor:[UIColor grayColor]];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(200,200,300,100)];
+    [label setText:@"Remote Control View!"];
+    [label setTextColor:[UIColor redColor]];
+    [label setBackgroundColor:[UIColor clearColor]];
+    [self.view addSubview:label];
 }
 
 - (void)viewDidUnload
